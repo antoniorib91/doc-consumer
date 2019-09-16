@@ -1,0 +1,98 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <h5>Document {{ fileName }} Info: </h5>
+      </div>
+    </div>
+    <div *ngIf="dirName === 'out'" class="col-md-12 col-xl-12 col-12">
+      <div class="row">
+        <div class="col-12" *ngIf="info">
+          <h6>Total Sellers: {{info.amountSellers}}</h6>
+          <h6>Total Clients: {{info.amountClients}}</h6>
+          <h6>Most Expensive Sale: {{info.bestSale.saleId}}</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 with_margin">
+          <h6>Client info:</h6>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">CNPJ</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Business Area</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cli of clients">
+                  <td>{{ cli.id }}</td>
+                  <td>{{ cli.CNPJ }}</td>
+                  <td>{{ cli.name }}</td>
+                  <td>{{ cli.businessArea }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 with_margin">
+          <h6>Salesman info:</h6>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">CPF</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Salary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let saleman of sellers">
+                  <td>{{ saleman.id }}</td>
+                  <td>{{ saleman.CPF }}</td>
+                  <td>{{ saleman.name }}</td>
+                  <td>{{ saleman.salary }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 with_margin">
+          <h6>Sales info:</h6>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Sale Id</th>
+                  <th scope="col">Salesman Name</th>
+                  <th scope="col">Sale Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sale of sales">
+                  <td>{{ sale.id }}</td>
+                  <td>{{ sale.saleId }}</td>
+                  <td>{{ sale.salesmanName }}</td>
+                  <td>{{ sale.saleAmount }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="dirName === 'in'">
+      <code *ngFor="let line  of lines">
+        {{ line }} <br>
+      </code>
+    </div>
+  </div>
+</div>

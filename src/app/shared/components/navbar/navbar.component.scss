@@ -1,0 +1,12 @@
+@import '../../../../assets/guide.scss';
+
+.navbar {
+  &.navbar-light {
+    background-color: $nav-background;
+  }
+
+  .navbar-brand {
+    color: $brand-color;
+    font-weight: 900;
+  }
+}

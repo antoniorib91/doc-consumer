@@ -1,0 +1,6 @@
+<a *ngIf="withRouter" [routerLink]="[link]">
+  <i class="far fa-file"></i>{{text}}
+</a>
+<a *ngIf="!withRouter" [href]="link ? link : '#'">
+  <i class="far fa-file"></i>{{text}}
+</a> 

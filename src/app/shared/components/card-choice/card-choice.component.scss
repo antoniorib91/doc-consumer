@@ -1,0 +1,26 @@
+.card {
+  margin: 5px;
+  height: 200px;
+  &:hover {
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.5);
+  }
+}
+.custom {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+
+  .fa-folder-open {
+    font-size: 58px;
+    text-align: center;
+  }
+
+  .fa-folder {
+    font-size: 58px;
+    text-align: center;
+  }
+
+  p {
+    margin: 10px;
+  }
+}

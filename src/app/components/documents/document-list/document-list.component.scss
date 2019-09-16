@@ -1,0 +1,15 @@
+@import '../../../../assets/guide.scss';
+
+.card {
+  margin-top: 15px;
+  height: calc(90vh - 25px);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 15px;
+  background-color: $color3;
+  height: calc(80vh - 65px);
+  overflow: auto;
+}
+
